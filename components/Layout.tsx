@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image'
+import Link from 'next/link'
+
 import { ReactNode } from 'react';
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
@@ -20,8 +22,8 @@ const Layout = ({ children }: Props) => {
       </Head>
 
       <header className={styles.header}>
-        <Image src="/images/profile.png" alt="rendaman0215" width="100" height="100" className={utilStyles.borderCircle}/>
-        <h1 className={utilStyles.heading2Xl} >{name}</h1>
+        <Image src="/images/profile.png" alt="rendaman0215" width="80" height="80" className={utilStyles.borderCircle}/>
+        <Link href="/"><a><h1 className={`${utilStyles.headingXl} ${utilStyles.black}`} >{name}</h1></a></Link>
       </header>
 
       <main>

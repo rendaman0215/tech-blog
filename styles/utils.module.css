@@ -23,7 +23,7 @@
 }
 
 .headingMd {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.5;
   text-align: center;
 }
@@ -38,6 +38,15 @@
 
 .padding1px {
   padding-top: 1px;
+}
+
+.padding5px {
+  padding-top: 5px;
+}
+
+.card {
+  background: hsla(0,0%,100%,.9);
+  padding: 30px 20px 20px 30px;
 }
 
 .list {
@@ -57,4 +66,13 @@
 .boldText {
   color: black;
   font-weight: 550;
+}
+
+a.backHome {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+a.backHome:hover {
+  text-decoration: underline;
 }
