@@ -18,7 +18,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "types": ["@types/node", "@types/matter-js"]
+    "types": ["@types/node"]
   },
   "include": [
     "next-env.d.ts",
