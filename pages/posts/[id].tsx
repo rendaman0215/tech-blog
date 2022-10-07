@@ -13,7 +13,13 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>;
 export const getStaticPaths = async () => {
   const paths = listAllPostIds();
   return {
-    paths,
+    paths: paths.map((path) => {
+      return {
+        params: {
+          id: path,
+        },
+      };
+    }),
     fallback: false,
   };
 };
@@ -21,7 +27,6 @@ export const getStaticPaths = async () => {
 // SSGの場合
 export async function getStaticProps({ params }:any) {
   const postData = await getPostData(params.id);
-
   return {
     props: {
       postData,
